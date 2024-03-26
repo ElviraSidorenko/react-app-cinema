@@ -7,20 +7,20 @@ const Navbar = () => {
             <Nav>
                 <NavMenu>
                 <NavLink to="/" activeStyle>
-                        Home
+                        Movies
                     </NavLink>
                     <NavLink to="/upcoming" activeStyle>
                         Coming Soon
                     </NavLink>
-                    <NavLink to="/contact" activeStyle>
-                        Contact Us
+                    <NavLink to="/booking" activeStyle>
+                        Bookings
                     </NavLink>
                     <NavLink to="/cafe" activeStyle>
                         Cafe
                     </NavLink>
-                    <NavLink to="/booking" activeStyle>
-                        Bookings
-                    </NavLink>
+                    <NavLink to="/contact" activeStyle>
+                        Contact Us
+                    </NavLink>                
                 </NavMenu>
             </Nav>
         </>

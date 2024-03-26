@@ -1,10 +1,10 @@
 import React from "react";
+import Hero from '../components/Hero';
  
 const Home = () => {
     return (
-        <div>
-            <h1>Welcome to Tongariro Cinema</h1>
-        </div>
+        <Hero title="Welcome to Our Site!" 
+        subtitle="Find out more about us."  />
     );
 };
  
