@@ -17,10 +17,10 @@ export const NavMenu = styled.div`
     flex-direction: column; // Stack links vertically on mobile
     width: 100%; // Take full width
     position: absolute; // Position it on top of everything else
-    top: 85px; // Adjust based on your Nav height
+    top: 5rem;
     left: 0;
     background-color: #ffcd29;
-    z-index: 10; // Ensure it's above other content
+    z-index: 10;
   }
 `;
 

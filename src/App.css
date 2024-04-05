@@ -18,11 +18,11 @@ nav {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+
 }
 
 .hero-text {
-  flex: 2;
+  flex: 1;
 }
 
 .hero-text h1 {
@@ -42,7 +42,6 @@ nav {
 
 .hero-image {
   flex: 1;
-  min-width: 300px;
 }
 
 .hero-image img {
@@ -50,3 +49,18 @@ nav {
   height: auto;
 }
 
+/* Responsive design for mobile devices */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+  }
+  .hero-text,
+  .hero-image {
+    flex: none;
+    width: 100%;
+  }
+
+  .hero-image {
+    display: none;
+  }
+}
