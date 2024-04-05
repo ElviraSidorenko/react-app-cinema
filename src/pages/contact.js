@@ -1,11 +1,20 @@
 import React from "react";
 import Hero from "../components/Hero";
+import Footer from "../components/Footer";
 
- 
 const Contact = () => {
-    return (
-        <Hero title='Experience the Magic of Cinema with Us' buttonText='BOOK NOW' buttonLink='/booking' isDownload={false} imageUrl={`${process.env.PUBLIC_URL}/assets/empty-theatre-cinema-seats.jpg`} />
-    );
+  return (
+    <>
+      <Hero
+        title="Experience the Magic of Cinema with Us"
+        buttonText="BOOK NOW"
+        buttonLink="/booking"
+        isDownload={false}
+        imageUrl={`${process.env.PUBLIC_URL}/assets/empty-theatre-cinema-seats.jpg`}
+      />
+      <Footer />
+    </>
+  );
 };
- 
+
 export default Contact;

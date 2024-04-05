@@ -6,8 +6,8 @@ const Hero = ({ title, buttonText, buttonLink, isDownload, imageUrl }) => {
       // If it's a download button, initiate PDF download
       // Replace 'path_to_your_pdf.pdf' with the actual path to your PDF file
       const link = document.createElement("a");
-      link.href = `${process.env.PUBLIC_URL}/assets/Beasty_Menu_March_2024.pdf`;
-      link.setAttribute("download", "Beasty_Menu_March_2024.pdf");
+      link.href = `${process.env.PUBLIC_URL}/assets/NomNom_Cafe_Menu.png`;
+      link.setAttribute("download", "NomNom_Cafe_Menu.png");
       document.body.appendChild(link);
       link.click();
       link.remove();

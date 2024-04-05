@@ -64,3 +64,63 @@ nav {
     display: none;
   }
 }
+
+.pageTitle {
+  text-align: center;
+  margin: 20px 0;
+
+}
+
+.movie-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Adjust the gap between tiles as needed */
+  justify-content: center; /* Center tiles within the container */
+  padding: 20px; /* Add some padding around the grid */
+}
+
+.movie-tile {
+  flex: 0 1 300px; /* Tiles flex basis is 300px, change this value as needed */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff; /* Background color for the tiles */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Simple box shadow for styling */
+  border-radius: 8px; /* Optional: adds rounded corners to the tiles */
+  padding: 20px;
+  text-align: center; /* Center the text */
+}
+
+.movie-tile img {
+  width: 100%; /* Make image fill the container */
+  border-radius: 8px 8px 0 0; /* Optional: top rounded corners for the image */
+  margin-bottom: 20px;
+}
+
+.movie-tile h2 {
+  margin: 10px 0;
+}
+
+.movie-tile p {
+  flex-grow: 1; /* Allows the description to fill the space, pushing the button down */
+}
+
+.movie-tile button {
+  background-color: #007bff; /* Example button color */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.movie-tile button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+.movie-tile .iconStyle {
+  font-size: 3rem;
+  color: #ffcd29;
+  margin: 0 10px;
+};
