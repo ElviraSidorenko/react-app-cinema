@@ -6,6 +6,7 @@ import Upcoming from "./pages/upcoming";
 import Cafe from "./pages/cafe";
 import Booking from "./pages/booking";
 import Contact from "./pages/contact";
+import './App.css';
 
 function App() {
   return (

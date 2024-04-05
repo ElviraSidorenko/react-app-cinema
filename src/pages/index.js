@@ -1,11 +1,9 @@
 import React from "react";
-import Hero from '../components/Hero';
- 
+import Hero from "../components/Hero";
+
+
 const Home = () => {
-    return (
-        <Hero title="Welcome to Our Site!" 
-        subtitle="Find out more about us."  />
-    );
+  return <Hero title='Experience the Magic of Cinema with Us' buttonText='BOOK NOW' buttonLink='/booking' isDownload={false} imageUrl={`${process.env.PUBLIC_URL}/assets/empty-theatre-cinema-seats.jpg`} />;
 };
- 
+
 export default Home;

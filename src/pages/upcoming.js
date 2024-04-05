@@ -1,13 +1,11 @@
 
 import React from "react";
+import Hero from "../components/Hero";
+
 
 const Upcoming = () => {
 	return (
-		<div>
-			<h1>
-				Coming Soon
-			</h1>
-		</div>
+		<Hero title='Experience the Magic of Cinema with Us' buttonText='BOOK NOW' buttonLink='/booking' isDownload={false} imageUrl={`${process.env.PUBLIC_URL}/assets/empty-theatre-cinema-seats.jpg`} />
 	);
 };
 
