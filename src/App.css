@@ -317,3 +317,31 @@ img {
   color: #666;
   margin-bottom: 10px;
 }
+
+.seatGrid {
+  display: grid;
+  grid-template-rows: repeat(10, 1fr);
+  gap: 5px;
+}
+
+.seatRow {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+}
+
+.seat {
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: #fff;
+}
+
+.selected {
+  background-color: #4caf50;
+  color: #fff;
+}

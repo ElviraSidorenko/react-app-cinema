@@ -6,7 +6,12 @@
       "description": "An aging Chinese immigrant is swept up in an insane adventure, where she alone can save the world by exploring other universes connecting with the lives she could have led.",
       "movieImg": "/assets/EverythingEverywhereAllAtOnce.jpeg",
       "IMDbLink": "https://www.imdb.com/title/tt6710474/",
-      "trailerLink": "https://www.youtube.com/watch?v=wxN1T1uxQ2g"
+      "trailerLink": "https://www.youtube.com/watch?v=wxN1T1uxQ2g",
+      "showtimes": {
+        "2024-04-06": ["10:00 AM", "2:00 PM", "6:00 PM"],
+        "2024-04-07": ["11:00 AM", "3:00 PM", "7:00 PM"],
+        "2024-04-08": ["12:00 PM", "4:00 PM", "8:00 PM"]
+      }
     },
     {
       "id": 2,
@@ -14,7 +19,12 @@
       "description": "In his second year of fighting crime, Batman uncovers corruption in Gotham City that connects to his own family while facing a serial killer known as the Riddler.",
       "movieImg": "/assets/TheBatman.jpeg",
       "IMDbLink": "https://www.imdb.com/title/tt1877830/",
-      "trailerLink": "https://www.youtube.com/watch?v=mqqft2x_Aa4"
+      "trailerLink": "https://www.youtube.com/watch?v=mqqft2x_Aa4",
+      "showtimes": {
+        "2024-04-06": ["10:00 AM", "2:00 PM", "6:00 PM"],
+        "2024-04-07": ["11:00 AM", "3:00 PM", "7:00 PM"],
+        "2024-04-08": ["12:00 PM", "4:00 PM", "8:00 PM"]
+      }
     },
     {
       "id": 3,
@@ -22,7 +32,12 @@
       "description": "Feature adaptation of Frank Herbert's science fiction novel, about the son of a noble family entrusted with the protection of the most valuable asset and most vital element in the galaxy.",
       "movieImg": "/assets/Dune.jpeg",
       "IMDbLink": "https://www.imdb.com/title/tt1160419/",
-      "trailerLink": "https://www.youtube.com/watch?v=n9xhJrPXop4"
+      "trailerLink": "https://www.youtube.com/watch?v=n9xhJrPXop4",
+      "showtimes": {
+        "2024-04-06": ["10:00 AM", "2:00 PM", "6:00 PM"],
+        "2024-04-07": ["11:00 AM", "3:00 PM", "7:00 PM"],
+        "2024-04-08": ["12:00 PM", "4:00 PM", "8:00 PM"]
+      }
     },
     {
       "id": 4,
@@ -30,7 +45,12 @@
       "description": "James Bond has left active service. His peace is short-lived when Felix Leiter, an old friend from the CIA, turns up asking for help, leading Bond onto the trail of a mysterious villain armed with dangerous new technology.",
       "movieImg": "/assets/NoTimeToDie.jpeg",
       "IMDbLink": "https://www.imdb.com/title/tt2382320/",
-      "trailerLink": "https://www.youtube.com/watch?v=vw2FOYjCz38"
+      "trailerLink": "https://www.youtube.com/watch?v=vw2FOYjCz38",
+      "showtimes": {
+        "2024-04-06": ["10:00 AM", "2:00 PM", "6:00 PM"],
+        "2024-04-07": ["11:00 AM", "3:00 PM", "7:00 PM"],
+        "2024-04-08": ["12:00 PM", "4:00 PM", "8:00 PM"]
+      }
     },
     {
       "id": 5,
@@ -38,7 +58,12 @@
       "description": "With Spider-Man's identity now revealed, Peter asks Doctor Strange for help. When a spell goes wrong, dangerous foes from other worlds start to appear, forcing Peter to discover what it truly means to be Spider-Man.",
       "movieImg": "/assets/SpiderManNoWayHome.jpeg",
       "IMDbLink": "https://www.imdb.com/title/tt10872600/",
-      "trailerLink": "https://www.youtube.com/watch?v=JfVOs4VSpmA"
+      "trailerLink": "https://www.youtube.com/watch?v=JfVOs4VSpmA",
+      "showtimes": {
+        "2024-04-06": ["10:00 AM", "2:00 PM", "6:00 PM"],
+        "2024-04-07": ["11:00 AM", "3:00 PM", "7:00 PM"],
+        "2024-04-08": ["12:00 PM", "4:00 PM", "8:00 PM"]
+      }
     },
     {
       "id": 6,
@@ -46,7 +71,12 @@
       "description": "After landing the gig of a lifetime, a New York jazz pianist suddenly finds himself trapped in a strange land between Earth and the afterlife.",
       "movieImg": "/assets/Soul.jpeg",
       "IMDbLink": "https://www.imdb.com/title/tt2948372/",
-      "trailerLink": "https://www.youtube.com/watch?v=xOsLIiBStEs"
+      "trailerLink": "https://www.youtube.com/watch?v=xOsLIiBStEs",
+      "showtimes": {
+        "2024-04-06": ["10:00 AM", "2:00 PM", "6:00 PM"],
+        "2024-04-07": ["11:00 AM", "3:00 PM", "7:00 PM"],
+        "2024-04-08": ["12:00 PM", "4:00 PM", "8:00 PM"]
+      }
     },
     {
       "id": 7,
@@ -54,7 +84,12 @@
       "description": "Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan.",
       "movieImg": "/assets/Parasite.jpeg",
       "IMDbLink": "https://www.imdb.com/title/tt6751668/",
-      "trailerLink": "https://www.youtube.com/watch?v=5xH0HfJHsaY"
+      "trailerLink": "https://www.youtube.com/watch?v=5xH0HfJHsaY",
+      "showtimes": {
+        "2024-04-06": ["10:00 AM", "2:00 PM", "6:00 PM"],
+        "2024-04-07": ["11:00 AM", "3:00 PM", "7:00 PM"],
+        "2024-04-08": ["12:00 PM", "4:00 PM", "8:00 PM"]
+      }
     },
     {
       "id": 8,
@@ -62,7 +97,12 @@
       "description": "During World War I, two British soldiers are sent to deliver an urgent message to an isolated regiment. If the message is not received in time, the regiment will walk into a trap and be massacred.",
       "movieImg": "/assets/1917.jpeg",
       "IMDbLink": "https://www.imdb.com/title/tt8579674/",
-      "trailerLink": "https://www.youtube.com/watch?v=YqNYrYUiMfg"
+      "trailerLink": "https://www.youtube.com/watch?v=YqNYrYUiMfg",
+      "showtimes": {
+        "2024-04-06": ["10:00 AM", "2:00 PM", "6:00 PM"],
+        "2024-04-07": ["11:00 AM", "3:00 PM", "7:00 PM"],
+        "2024-04-08": ["12:00 PM", "4:00 PM", "8:00 PM"]
+      }
     },
     {
       "id": 9,
@@ -70,7 +110,12 @@
       "description": "In Gotham City, mentally troubled comedian Arthur Fleck is disregarded and mistreated by society. He then embarks on a downward spiral of revolution and bloody crime. This path brings him face-to-face with his alter-ego: the Joker.",
       "movieImg": "/assets/Joker.jpeg",
       "IMDbLink": "https://www.imdb.com/title/tt7286456/",
-      "trailerLink": "https://www.youtube.com/watch?v=zAGVQLHvwOY"
+      "trailerLink": "https://www.youtube.com/watch?v=zAGVQLHvwOY",
+      "showtimes": {
+        "2024-04-06": ["10:00 AM", "2:00 PM", "6:00 PM"],
+        "2024-04-07": ["11:00 AM", "3:00 PM", "7:00 PM"],
+        "2024-04-08": ["12:00 PM", "4:00 PM", "8:00 PM"]
+      }
     },
     {
       "id": 10,
@@ -78,7 +123,12 @@
       "description": "A mob hitman recalls his possible involvement with the slaying of Jimmy Hoffa.",
       "movieImg": "/assets/TheIrishman.jpeg",
       "IMDbLink": "https://www.imdb.com/title/tt1302006/",
-      "trailerLink": "https://www.youtube.com/watch?v=WHXxVmeGQUc"
+      "trailerLink": "https://www.youtube.com/watch?v=WHXxVmeGQUc",
+      "showtimes": {
+        "2024-04-06": ["10:00 AM", "2:00 PM", "6:00 PM"],
+        "2024-04-07": ["11:00 AM", "3:00 PM", "7:00 PM"],
+        "2024-04-08": ["12:00 PM", "4:00 PM", "8:00 PM"]
+      }
     }
   ]
   
