@@ -2,11 +2,14 @@ import { NavLink as Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Nav = styled.nav`
-  height: 85px;
+
   display: flex;
-  padding: 0.2rem calc((100vw - 1000px) / 2);
+  padding: 1rem calc((100vw - 1000px) / 2);
   z-index: 12;
   justify-content: flex-end;
+  background-color: #ffcd29;
+  width: 100%;
+  position: absolute;
 `;
 
 export const NavMenu = styled.div`
@@ -16,11 +19,12 @@ export const NavMenu = styled.div`
     display: ${({ isOpen }) => (isOpen ? "flex" : "none")};
     flex-direction: column; // Stack links vertically on mobile
     width: 100%; // Take full width
-    position: absolute; // Position it on top of everything else
-    top: 5rem;
+    position: relative; // Position it on top of everything else
+    top: 1rem;
     left: 0;
     background-color: #ffcd29;
     z-index: 10;
+
   }
 `;
 
@@ -49,5 +53,6 @@ export const MobileIcon = styled.div`
     font-size: 1.8rem;
     cursor: pointer;
     color: #fff;
+    z-index: 110;
   }
 `;

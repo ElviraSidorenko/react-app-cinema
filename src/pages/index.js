@@ -3,6 +3,7 @@ import Hero from "../components/Hero";
 import Footer from "../components/Footer";
 import MovieGrid from "../components/MovieGrid";
 import movies from "../data/movies.json";
+import ScrollToTopButton from "../components/ScrollToTopButton";
 
 
 const Home = () => {
@@ -18,6 +19,7 @@ const Home = () => {
       />
       <MovieGrid movies={movies} pageTitle="NOW SHOWING" />
       <Footer />
+      <ScrollToTopButton />
     </>
   );
 };

@@ -4,11 +4,6 @@
   box-sizing: border-box;
 }
 
-
-nav {
-  background-color: #ffcd29;
-}
-
 .hero-section {
   background-color: #ffcd29;
   padding: 50px;
@@ -18,7 +13,6 @@ nav {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-
 }
 
 .hero-text {
@@ -68,7 +62,6 @@ nav {
 .pageTitle {
   text-align: center;
   margin: 20px 0;
-
 }
 
 .movie-grid {
@@ -123,4 +116,18 @@ nav {
   font-size: 3rem;
   color: #ffcd29;
   margin: 0 10px;
-};
+}
+
+.scroll-to-top-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 1rem;
+  font-size: 16px;
+  z-index: 1000;
+  background-color: #ffcd29;
+  border: none;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
