@@ -23,7 +23,10 @@ const footerStyle = {
     padding: '1rem',
     display: 'flex',
     justifyContent: 'space-between',
-    alignItems: 'center'
+    alignItems: 'center',
+    bottom: 0,
+
+
 };
 
 const leftContentStyle = {

@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { FaPlayCircle, FaInfoCircle } from "react-icons/fa";
 
 const MovieTile = ({
@@ -7,10 +8,15 @@ const MovieTile = ({
   movieImg,
   IMDbLink,
   trailerLink,
-  movieId,
-  onBookNowClick,
   isBookable
 }) => {
+
+  const navigate = useNavigate(); // Use useNavigate hook
+
+  const handleBookNowClick = () => {
+    // Navigate to '/booking' page and pass selected movie title
+    navigate('/booking', { state: { selectedMovie: title } });
+  };
   return (
     <div className="movie-tile">
       <img src={movieImg} alt={title} />
@@ -25,7 +31,7 @@ const MovieTile = ({
       <h2>{title}</h2>
       <p>{description}</p>
       {isBookable ? (
-        <button onClick={onBookNowClick}>Book Now</button>
+        <button onClick={handleBookNowClick}>Book Now</button>
       ) : (
         <button style={{ display: "none" }}>Book Now</button>
       )}

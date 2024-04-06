@@ -7,12 +7,19 @@ import Footer from "../components/Footer";
 import ScrollToTopButton from "../components/ScrollToTopButton";
 
 const Booking = () => {
+  const location = useLocation();
   const [selectedMovie, setSelectedMovie] = useState("");
   const [selectedDate, setSelectedDate] = useState("");
   const [selectedTime, setSelectedTime] = useState("");
   const [selectedSeats, setSelectedSeats] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
   const [showBookingSummary, setShowBookingSummary] = useState(false);
+
+  useEffect(() => {
+    if (location.state && location.state.selectedMovie) {
+      setSelectedMovie(location.state.selectedMovie);
+    }
+  }, [location.state]);
 
   // Function to handle seat selection
   const handleSeatSelection = (seat) => {
@@ -34,6 +41,20 @@ const Booking = () => {
     // You can implement the booking submission logic here, like sending data to server, generating confirmation number, etc.
   };
 
+  const handleCloseModal = () => {
+    window.location.reload();
+    // setSelectedMovie("");
+    // setSelectedDate("");
+    // setSelectedTime("");
+    // setSelectedSeats([]);
+    // setTotalPrice(0);
+    // setShowBookingSummary(false);
+    // Optionally, you can also navigate the user to a specific route, for a full page refresh use:
+    // window.location.reload();
+    // Or for a soft reset without reloading, just hide the modal and reset states as above.
+  };
+
+
   return (
     <>
       {" "}
@@ -44,11 +65,12 @@ const Booking = () => {
         isDownload={false}
         imageUrl={`${process.env.PUBLIC_URL}/assets/empty-theatre-cinema-seats.jpg`}
       />
-      <div>
+      <div className="booking-container">
         <h1>Booking Details</h1>
         <label htmlFor="movieSelection">Movie Selection:</label>
         <select
           id="movieSelection"
+          value={selectedMovie}
           onChange={(e) => setSelectedMovie(e.target.value)}
         >
           <option value="">Select Movie</option>
@@ -143,6 +165,7 @@ const Booking = () => {
             <p>Confirmation Number: ABC123</p>
             {/* Add terms and conditions */}
             <p>Terms & Conditions: ...</p>
+            <button className="close-button" onClick={handleCloseModal}>Close</button>
           </div>
         </div>
       )}

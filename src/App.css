@@ -318,6 +318,7 @@ img {
   margin-bottom: 10px;
 }
 
+/* Seating Grid */
 .seatGrid {
   display: grid;
   grid-template-rows: repeat(10, 1fr);
@@ -344,4 +345,126 @@ img {
 .selected {
   background-color: #4caf50;
   color: #fff;
+}
+
+.booking-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.booking-container h1,
+.booking-container h2 {
+  margin-top: 20px;
+}
+
+.booking-container label {
+  display: block;
+  margin-top: 10px;
+}
+
+.booking-container select,
+.booking-container input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+
+
+.booking-container button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.booking-container button:hover {
+  background-color: #0056b3;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Add your styles for the close button */
+.close-button {
+  background-color: #ccc;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.close-button:hover {
+  background-color: #999;
+}
+
+
+/* Backdrop styles */
+.modal-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Darker backdrop for better focus */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s; /* Smooth fade-in effect */
+}
+
+/* Modal content box styles */
+.modal-content {
+  width: 90%; /* Responsive width */
+  max-width: 500px; /* Maximum width */
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center; /* Center the text for better readability */
+}
+
+/* Close button styles */
+.modal-content button {
+  margin-top: 20px; /* Some space above the button */
+  padding: 10px 20px;
+  font-size: 16px; /* Larger font size for better readability */
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff; /* A pleasant blue */
+  color: white; /* White text on the blue button */
+  cursor: pointer; /* Cursor pointer to indicate clickable */
+  transition: background-color 0.2s; /* Smooth background color transition */
+}
+
+.modal-content button:hover {
+  background-color: #0056b3; /* Darker shade of blue on hover */
 }
