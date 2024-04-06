@@ -126,8 +126,194 @@
   font-size: 16px;
   z-index: 1000;
   background-color: #ffcd29;
+  opacity: 0.5;
   border: none;
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
+}
+
+/* CafePage.css */
+
+/* Style for cafe-info container */
+.cafe-info {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Style for headings */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-top: 30px;
+}
+
+/* Style for paragraphs */
+p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Style for menu image */
+img {
+  display: block;
+  max-width: 100%;
+  margin-top: 20px;
+}
+
+/* Continue from the existing styles */
+
+.operations-info {
+  background-color: #f5f5f5; /* Light grey background */
+  padding: 20px;
+  margin-top: 30px;
+
+}
+
+@media (max-width: 768px) {
+  .operations-info {
+    margin-bottom: 6rem;
+  }
+
+}
+
+.operations-info h2 {
+  margin-bottom: 15px;
+}
+
+.operations-info p {
+  font-size: 1rem; /* Slightly smaller font size for more formal info */
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.operations-info a {
+  color: #007bff; /* A pleasant blue, feel free to adjust */
+  text-decoration: none; /* Removes underline */
+}
+
+.operations-info a:hover {
+  text-decoration: underline; /* Adds underline on hover for better UX */
+}
+
+/* History section */
+.history-section {
+  background-color: #f9f9f9;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.history-section h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.history-section p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Contact section */
+.contact-section {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.contact-section p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.contact-section form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.contact-section .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-section label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.contact-section input[type="text"],
+.contact-section input[type="email"],
+.contact-section input[type="tel"],
+.contact-section textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-section textarea {
+  resize: vertical;
+}
+
+.contact-section button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-section button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Where to find us section */
+.where-to-find-us {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+}
+
+.where-to-find-us .map {
+  flex: 1;
+  margin-right: 20px;
+}
+@media (max-width: 768px) {
+  .where-to-find-us .map {
+    display: none;
+  }
+}
+
+.where-to-find-us .address-and-contact {
+  flex: 1;
+  text-align: left;
+}
+
+.where-to-find-us h3 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.where-to-find-us p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 10px;
 }
