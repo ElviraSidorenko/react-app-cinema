@@ -1,7 +1,7 @@
 import React from "react";
 import MovieTile from "../MovieTile";
 
-const MovieGrid = ({ movies, pageTitle }) => {
+const MovieGrid = ({ movies, pageTitle, isBookable }) => {
     return (
         <>
         <h1 className="pageTitle">{pageTitle}</h1>
@@ -15,6 +15,7 @@ const MovieGrid = ({ movies, pageTitle }) => {
             onBookNowClick={() => console.log('Booked')} // You'll need to implement handleBookNow function
           IMDbLink={movie.IMDbLink}
             trailerLink={movie.trailerLink}
+            isBookable={isBookable}
           />
         ))}
       </div>

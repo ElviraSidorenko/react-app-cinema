@@ -6,7 +6,7 @@ const Footer = () => {
     return (
         <footer style={footerStyle}>
             <div style={leftContentStyle}>
-                <button style={contactButtonStyle}>Contact Us</button>
+                <a href='/contact' style={contactButtonStyle}>Contact Us</a>
             </div>
             <div style={rightContentStyle}>
                 <a href="https://facebook.com"><FaFacebook style={iconStyle} /></a>
@@ -41,7 +41,8 @@ const contactButtonStyle = {
     padding: '0.5rem 1rem',
     border: 'none',
     borderRadius: '5px',
-    cursor: 'pointer'
+    cursor: 'pointer',
+    textDecoration: 'none'
 };
 
 const iconStyle = {

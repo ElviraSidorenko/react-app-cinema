@@ -17,7 +17,7 @@ const Home = () => {
         isDownload={false}
         imageUrl={`${process.env.PUBLIC_URL}/assets/empty-theatre-cinema-seats.jpg`}
       />
-      <MovieGrid movies={movies} pageTitle="NOW SHOWING" />
+      <MovieGrid movies={movies} pageTitle="NOW SHOWING" isBookable={true}/>
       <Footer />
       <ScrollToTopButton />
     </>

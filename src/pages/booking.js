@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 
 import Hero from "../components/Hero";
 import Footer from "../components/Footer";
+import ScrollToTopButton from "../components/ScrollToTopButton";
 
 const Booking = () => {
   return (
@@ -19,6 +20,7 @@ const Booking = () => {
         <h1>Book Your Movie</h1>
       </div>
       <Footer />
+      <ScrollToTopButton />
     </>
   );
 };

@@ -1,6 +1,7 @@
 import React from 'react';
 import Hero from '../components/Hero';
 import Footer from '../components/Footer';
+import ScrollToTopButton from '../components/ScrollToTopButton';
 
 const CafePage = () => {
 
@@ -14,7 +15,7 @@ const CafePage = () => {
         isDownload={true}
       />
       <Footer />
-
+      <ScrollToTopButton />
     </>
   );
 };

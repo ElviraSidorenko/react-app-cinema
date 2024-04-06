@@ -9,6 +9,7 @@ const MovieTile = ({
   trailerLink,
   movieId,
   onBookNowClick,
+  isBookable
 }) => {
   return (
     <div className="movie-tile">
@@ -23,7 +24,11 @@ const MovieTile = ({
       </div>
       <h2>{title}</h2>
       <p>{description}</p>
-      <button onClick={onBookNowClick}>Book Now</button>
+      {isBookable ? (
+        <button onClick={onBookNowClick}>Book Now</button>
+      ) : (
+        <button style={{ display: "none" }}>Book Now</button>
+      )}
     </div>
   );
 };

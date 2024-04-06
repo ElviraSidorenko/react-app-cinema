@@ -1,0 +1,43 @@
+[
+  {
+    "id": 1,
+    "title": "Civil War",
+    "description": "In a dystopian future America, a team of military-embedded journalists races against time to reach Washington, D.C., before rebel factions descend upon the White House.",
+    "movieImg": "/assets/CivilWar.jpeg",
+    "IMDbLink": "https://www.imdb.com/title/tt17279496/?ref_=nv_sr_srsg_0_tt_8_nm_0_q_civil%2520war",
+    "trailerLink": "https://www.youtube.com/watch?v=aDyQxtg0V2w"
+  },
+  
+  {
+    "id": 3,
+    "title": "Abigail",
+    "description": "After a group of criminals kidnap the ballerina daughter of a powerful underworld figure, they retreat to an isolated mansion, unaware that they're locked inside with no normal little girl.",
+    "movieImg": "/assets/Abigail.jpeg",
+    "IMDbLink": "https://www.imdb.com/title/tt27489557/?ref_=nv_sr_srsg_0_tt_1_nm_7_q_abigail",
+    "trailerLink": "https://www.youtube.com/watch?v=3PsP8MFH8p0"
+  },
+  {
+    "id": 4,
+    "title": "Challengers",
+    "description": "Tashi, a former tennis prodigy turned coach is married to a champion on a losing streak. Her strategy for her husband's redemption takes a surprising turn when he must face off against his former best friend and Tashi's former boyfriend.",
+    "movieImg": "/assets/Challengers.jpeg",
+    "IMDbLink": "https://www.imdb.com/title/tt16426418/?ref_=fn_al_tt_1",
+    "trailerLink": "https://www.youtube.com/watch?v=VobTTbg-te0"
+  },
+  {
+    "id": 5,
+    "title": "The Crow",
+    "description": "Soulmates Eric Draven and Shelly Webster are brutally murdered. Given the chance to save his true love by sacrificing himself, Eric sets out to seek revenge, traversing the worlds of the living and the dead to put the wrong things right.",
+    "movieImg": "/assets/TheCrow.jpeg",
+    "IMDbLink": "https://www.imdb.com/title/tt1340094/?ref_=nv_sr_srsg_0_tt_8_nm_0_q_the%2520cro",
+    "trailerLink": "https://www.youtube.com/watch?v=djSKp_pwmOA"
+  },
+  {
+    "id": 6,
+    "title": "Inside Out 2",
+    "description": "Follow Riley, in her teenage years, encountering new emotions.",
+    "movieImg": "/assets/InsideOut2.jpeg",
+    "IMDbLink": "https://www.imdb.com/title/tt22022452/?ref_=nv_sr_srsg_0_tt_8_nm_0_q_insid",
+    "trailerLink": "https://www.youtube.com/watch?v=LEjhY15eCx0"
+  }
+]
