@@ -18,12 +18,12 @@ const MovieTile = ({
   };
   return (
     <div className="movie-tile">
-      <img src={movieImg} alt={title} />
+      <div className="movie-tile-img-container"><img src={movieImg} alt={title} /></div>
       <div>
-        <a href={IMDbLink}>
+        <a href={IMDbLink} target="blank">
           <FaInfoCircle className="iconStyle" />
         </a>
-        <a href={trailerLink}>
+        <a href={trailerLink} target="blank">
           <FaPlayCircle className="iconStyle" />
         </a>
       </div>

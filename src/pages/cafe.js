@@ -2,7 +2,6 @@ import React from "react";
 import Hero from "../components/Hero";
 import Footer from "../components/Footer";
 import ScrollToTopButton from "../components/ScrollToTopButton";
-
 const CafePage = () => {
   return (
     <>
@@ -32,7 +31,7 @@ const CafePage = () => {
           nec aliquet purus purus a nunc. Nulla facilisi. Nullam nec semper
           turpis. Donec nec libero eget
         </p>
-        <h2>Our Menu</h2>
+        <h2>Our Menu</h2>         
         <img
           src={`${process.env.PUBLIC_URL}/assets/NomNom_Cafe_Menu.png`}
           alt="Cafe Menu"

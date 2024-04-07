@@ -82,6 +82,7 @@ select:focus {
 
 .hero-text h1 {
   font-size: 2.5em;
+  margin-bottom: 1rem;
 }
 
 .hero-text a {
@@ -93,14 +94,17 @@ select:focus {
   font-size: 2rem;
   cursor: pointer;
   text-align: center;
+  border-radius: 1rem;
 }
 
 .hero-image {
   flex: 1; /* Make the image take up the available space */
+
 }
 
 .hero-image img {
   margin: 0; /* Remove default margin */
+  border-radius: 1rem; /* Round the corners of the image */
 }
 
 /* Responsive design for mobile devices */
@@ -112,6 +116,8 @@ select:focus {
   .hero-content {
     flex-direction: column; /* Stack the text, button, and image on top of each other */
     gap: 2rem; /* Equal gap between text, button, and image */
+    max-width: 60rem;
+    margin: 0 auto; /* Center the button */
   }
   .hero-text {
     text-align: center; /* Center the text on mobile screen */
@@ -119,6 +125,11 @@ select:focus {
 
   .hero-text a {
     width: 100%; /* Make the button full width to enhance a call for action */
+
+  }
+  .hero-image {
+    order: -1; /* Move the image above the text and button */
+
   }
 }
 
@@ -169,10 +180,16 @@ select:focus {
   text-align: center; /* Center the text */
 }
 
-.movie-tile img {
-  width: 100%; /* Make image fill the container */
-  border-radius: 2rem; /* Optional: top rounded corners for the image */
+.movie-tile-img-container {
+  width: 100%;
+  height: 26rem; /* Set a fixed height for the image container */
+  overflow: hidden; /* Hide overflowing image */
   margin: 0 0 2rem 0; /* Add space below the image (equal to the space above) */
+}
+
+.movie-tile img {
+  border-radius: 2rem; /* Round the corners of the image */
+  margin: 0; /* Remove default margin */
 }
 
 .movie-tile .iconStyle {
@@ -197,9 +214,9 @@ select:focus {
   padding: 1rem 2rem;
   margin: 0;
   cursor: pointer;
-  border-radius: 4px;
   width: 100%;
   font-size: 2rem;
+  border-radius: 1rem;
 }
 
 .movie-tile button:hover { /* Change button color on hover */
@@ -207,72 +224,58 @@ select:focus {
   color: #000;
 }
 
-/* CafePage.css */
+/***** CAFE PAGE CSS *****/
 
 /* Style for cafe-info container */
 .cafe-info {
   max-width: 800px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 2rem;
 }
 
 /* Style for headings */
-h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
+.cafe-info h1, h2 {
+  font-size: 3rem;
+  margin: 3rem 0;
+  font-weight: 100;
+  text-align: center;
 
-h2 {
-  font-size: 1.8rem;
-  margin-top: 30px;
 }
 
 /* Style for paragraphs */
-p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin-bottom: 20px;
+.cafe-info p {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  text-align: center;
+  margin-bottom: 2rem;
+
 }
 
 /* Style for menu image */
-img {
+.cafe-info img {
   display: block;
-  max-width: 100%;
-  margin-top: 20px;
+  border-radius: 1rem;
 }
 
-/* Continue from the existing styles */
-
+/* Style for operations info */
 .operations-info {
-  background-color: #f5f5f5; /* Light grey background */
-  padding: 20px;
-  margin-top: 30px;
-}
-
-@media (max-width: 768px) {
-  .operations-info {
-    margin-bottom: 6rem;
-  }
+  max-width: 800px; /* Set a maximum width for better readability */
+  margin: 0 auto 3rem; /* Center the content */
+  padding: 0 2rem; /* Add padding to the sides */
 }
 
 .operations-info h2 {
-  margin-bottom: 15px;
+  font-size: 3rem;
+  margin: 3rem 0 3rem 0;
+  font-weight: 100;
 }
 
 .operations-info p {
-  font-size: 1rem; /* Slightly smaller font size for more formal info */
-  line-height: 1.5;
-  margin-bottom: 10px;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+
 }
 
-.operations-info a {
-  color: #007bff; /* A pleasant blue, feel free to adjust */
-  text-decoration: none; /* Removes underline */
-}
-
-.operations-info a:hover {
-  text-decoration: underline; /* Adds underline on hover for better UX */
-}
 
 /* History section */
 .history-section {

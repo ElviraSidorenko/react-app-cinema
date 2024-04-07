@@ -14,7 +14,7 @@ export const NavMenu = styled.div`
   align-items: center;
   justify-content: flex-end; // Push links to the right
   gap: calc(5rem + 2vw); // Gap grows with the viewport
-  padding: 2rem 5rem 2rem 0;
+  padding: 2rem 5rem 0 0;
   // Set up the mobile menu
   @media screen and (max-width: 768px) {
     // Hide the menu links or show the mobile menu
