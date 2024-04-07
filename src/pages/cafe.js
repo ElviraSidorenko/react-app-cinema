@@ -9,7 +9,7 @@ const CafePage = () => {
       <Hero
         title="Enjoy deliciousness at our cafe"
         buttonText="Download Our Menu"
-        imageUrl={`${process.env.PUBLIC_URL}/assets/empty-theatre-cinema-seats.jpg`}
+        imageUrl={`${process.env.PUBLIC_URL}assets/ice_cream_cafe_promotion.png`}
         isDownload={true}
       />
       <div className="cafe-info">

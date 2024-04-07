@@ -15,7 +15,7 @@ const Home = () => {
         buttonText="BOOK NOW"
         buttonLink="/booking"
         isDownload={false}
-        imageUrl={`${process.env.PUBLIC_URL}/assets/empty-theatre-cinema-seats.jpg`}
+        imageUrl={`${process.env.PUBLIC_URL}/assets/nightmares_unleashed_promotion_banner.png`}
       />
       <MovieGrid movies={movies} pageTitle="NOW SHOWING" isBookable={true}/>
       <Footer />

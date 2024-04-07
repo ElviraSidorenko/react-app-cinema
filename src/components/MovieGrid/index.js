@@ -1,7 +1,7 @@
 import React from "react";
 import MovieTile from "../MovieTile";
 
-const MovieGrid = ({ movies, pageTitle, isBookable }) => {
+const MovieGrid = ({ pageTitle, movies, isBookable }) => {
     return (
         <>
         <h1 className="pageTitle">{pageTitle}</h1>

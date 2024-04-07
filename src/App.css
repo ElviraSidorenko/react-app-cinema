@@ -24,7 +24,7 @@
   margin-bottom: 20px;
 }
 
-.hero-text button {
+.hero-text a {
   padding: 10px;
   width: 60%;
   background-color: #000;
@@ -32,6 +32,7 @@
   border: none;
   font-size: 1rem;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .hero-image {
@@ -467,4 +468,41 @@ img {
 
 .modal-content button:hover {
   background-color: #0056b3; /* Darker shade of blue on hover */
+}
+
+
+/* Footer styles */
+.footer {
+  color: #fff;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  bottom: 0;
+}
+
+.left-content {
+  flex: 1;
+}
+
+.right-content {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.contact-button {
+  background-color: #ffcd29;
+  color: #333;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.icon {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  color: #ffcd29;
+  text-decoration: none;
 }

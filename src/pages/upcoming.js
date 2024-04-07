@@ -13,7 +13,7 @@ const Upcoming = () => {
         buttonText="BOOK NOW"
         buttonLink="/booking"
         isDownload={false}
-        imageUrl={`${process.env.PUBLIC_URL}/assets/empty-theatre-cinema-seats.jpg`}
+        imageUrl={`${process.env.PUBLIC_URL}/assets/nightmares_unleashed_promotion_banner.png`}
       />
       <MovieGrid movies={upcomingMovies} pageTitle="COMING SOON" isBookable={false} />
       <Footer />

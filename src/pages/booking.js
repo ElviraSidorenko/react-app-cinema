@@ -1,27 +1,30 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import movies from "../data/movies.json";
-
 import Hero from "../components/Hero";
 import Footer from "../components/Footer";
 import ScrollToTopButton from "../components/ScrollToTopButton";
 
 const Booking = () => {
+  // Use location hook to get state passed from previous page
   const location = useLocation();
+  // State variables to store selected movie, date, time, seats, total price, and modal visibility
   const [selectedMovie, setSelectedMovie] = useState("");
   const [selectedDate, setSelectedDate] = useState("");
   const [selectedTime, setSelectedTime] = useState("");
   const [selectedSeats, setSelectedSeats] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
   const [showBookingSummary, setShowBookingSummary] = useState(false);
+  const [confirmationNumber, setConfirmationNumber] = useState("");
 
+  // Use effect to set selected movie if passed from previous page
   useEffect(() => {
     if (location.state && location.state.selectedMovie) {
       setSelectedMovie(location.state.selectedMovie);
     }
   }, [location.state]);
 
-  // Function to handle seat selection
+  // Function to handle seat selection and update total price
   const handleSeatSelection = (seat) => {
     if (selectedSeats.includes(seat)) {
       setSelectedSeats(
@@ -36,37 +39,27 @@ const Booking = () => {
 
   // Function to handle booking submission
   const handleBookNow = () => {
-    // Handle booking submission logic here
     setShowBookingSummary(true);
-    // You can implement the booking submission logic here, like sending data to server, generating confirmation number, etc.
+    setConfirmationNumber(Math.floor(Math.random() * 1000000000));
   };
-
+  // Function to handle modal close (reload page to reset booking)
   const handleCloseModal = () => {
     window.location.reload();
-    // setSelectedMovie("");
-    // setSelectedDate("");
-    // setSelectedTime("");
-    // setSelectedSeats([]);
-    // setTotalPrice(0);
-    // setShowBookingSummary(false);
-    // Optionally, you can also navigate the user to a specific route, for a full page refresh use:
-    // window.location.reload();
-    // Or for a soft reset without reloading, just hide the modal and reset states as above.
   };
-
 
   return (
     <>
-      {" "}
       <Hero
         title="Experience the Magic of Cinema with Us"
         buttonText="BOOK NOW"
         buttonLink="/booking"
         isDownload={false}
-        imageUrl={`${process.env.PUBLIC_URL}/assets/empty-theatre-cinema-seats.jpg`}
+        imageUrl={`${process.env.PUBLIC_URL}/assets/nightmares_unleashed_promotion_banner.png`}
       />
+      {/* Booking form */}
       <div className="booking-container">
         <h1>Booking Details</h1>
+        {/* Movie selection */}
         <label htmlFor="movieSelection">Movie Selection:</label>
         <select
           id="movieSelection"
@@ -80,6 +73,7 @@ const Booking = () => {
             </option>
           ))}
         </select>
+        {/* Date selection */}
         {selectedMovie && (
           <>
             <label htmlFor="dateSelection">Date:</label>
@@ -102,6 +96,7 @@ const Booking = () => {
             </select>
           </>
         )}
+        {/* Time selection */}
         {selectedDate && (
           <>
             <label htmlFor="timeSelection">Time:</label>
@@ -121,6 +116,7 @@ const Booking = () => {
             </select>
           </>
         )}
+        {/* Seat selection */}
         {selectedTime && (
           <>
             <h2>Select Your Seats</h2>
@@ -145,27 +141,40 @@ const Booking = () => {
                 </div>
               ))}
             </div>
+            {/* Display total price based on the selected seats and booking button */}
             <div>Total: ${totalPrice}</div>
             <button onClick={handleBookNow}>Book Now</button>
           </>
         )}
       </div>
+      {/* Booking summary modal */}
       {showBookingSummary && (
         <div className="modal">
           <div className="modal-content">
-            {/* Display booking summary */}
             <h2>Booking Summary</h2>
-            {/* Display selected movie, date, time, seats, total price */}
+            {/* Display selected movie, date, time, theatre, seats, total price */}
             <p>Movie: {selectedMovie}</p>
             <p>Date: {selectedDate}</p>
             <p>Time: {selectedTime}</p>
+            <p>Theatre: ${Math.floor(Math.random() * 4) + 1}</p>
             <p>Seats: {selectedSeats.join(", ")}</p>
             <p>Total Price: ${totalPrice}</p>
-            {/* You can add more details and confirmation number */}
-            <p>Confirmation Number: ABC123</p>
-            {/* Add terms and conditions */}
-            <p>Terms & Conditions: ...</p>
-            <button className="close-button" onClick={handleCloseModal}>Close</button>
+            <p>Confirmation Number: {confirmationNumber}</p>
+            <p>
+              Terms & Conditions: By confirming your booking, you agree to the
+              following terms and conditions: For any modifications or
+              cancellations, please directly contact our team. Payment is due
+              upon arrival at our premises and should be made at the counter
+              with our staff. Should you need to make changes or cancel your
+              reservation, reaching out to us directly ensures we can
+              accommodate your needs promptly. Please be aware that failure to
+              show up for your booking without prior cancellation may incur
+              charges. These terms are part of our commitment to providing you
+              with clear and concise service expectations.
+            </p>
+            <button className="close-button" onClick={handleCloseModal}>
+              Close
+            </button>
           </div>
         </div>
       )}

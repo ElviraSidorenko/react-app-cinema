@@ -5,8 +5,10 @@ import ScrollToTopButton from "../components/ScrollToTopButton";
 import { useState } from "react";
 
 const Contact = () => {
+  // State to show/hide the modal
   const [showModal, setShowModal] = useState(false);
 
+  // Function to handle form submission
   const handleSubmit = (event) => {
     event.preventDefault();
     // Show the modal
@@ -16,9 +18,10 @@ const Contact = () => {
   // Function to close the modal
   const closeModal = () => {
     setShowModal(false);
+    // Reload the page to clear the form
     window.location.reload();
   };
-
+  // Modal component
   const ThankYouModal = () => (
     <div className="modal-background">
       <div className="modal-content">
@@ -27,6 +30,7 @@ const Contact = () => {
       </div>
     </div>
   );
+
   return (
     <>
       <Hero
@@ -34,8 +38,9 @@ const Contact = () => {
         buttonText="BOOK NOW"
         buttonLink="/booking"
         isDownload={false}
-        imageUrl={`${process.env.PUBLIC_URL}/assets/empty-theatre-cinema-seats.jpg`}
+        imageUrl={`${process.env.PUBLIC_URL}/assets/nightmares_unleashed_promotion_banner.png`}
       />
+
       <div className="history-section">
         <h2>Est. 1974</h2>
         <p>
@@ -51,8 +56,10 @@ const Contact = () => {
           Have a question or need assistance? Fill out the form below, and we'll
           help you out.
         </p>
+        {/* Form */}
         <form onSubmit={handleSubmit}>
           <div className="form-group">
+            {/* Select element for inquiry type */}
             <label htmlFor="inquiryType">Inquiry Type</label>
             <select id="inquiryType" name="inquiryType" required>
               <option value="">Please select</option>
@@ -63,6 +70,7 @@ const Contact = () => {
               <option value="other">Other</option>
             </select>
           </div>
+          {/* Name, email, phone, and message input fields */}
           <div className="form-group">
             <label htmlFor="name">Name</label>
             <input type="text" id="name" name="name" required />
@@ -82,8 +90,11 @@ const Contact = () => {
           <button type="submit">Submit</button>
         </form>
       </div>
+      
       {/* Modal */}
       {showModal && <ThankYouModal />}
+
+      {/* Where to find us section */}
       <div className="where-to-find-us">
         <div className="map">
           <img
