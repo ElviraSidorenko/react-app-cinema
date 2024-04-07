@@ -3,25 +3,23 @@
 *,
 *::before,
 *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
 html {
   font-size: 62.5%; /* Set base font size (1rem) to 10px */
   scroll-behavior: smooth; /* Smooth scrolling behavior */
   scroll-padding-top: 75px; /* Add padding for smooth scrolling */
-
 }
 
 body {
   overflow-x: hidden; /* Prevent horizontal scrolling */
   position: relative; /* Position relative for footer positioning */
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Roboto, Arial, sans-serif; /* Set default font family: Roboto is a popular choice for modern web interfaces */
   font-size: 1.6em; /* Set default font size to 16px */
 }
-
 
 h1,
 h2,
@@ -29,7 +27,7 @@ h3,
 h4,
 h5,
 h6 {
-  line-height: normal;
+  line-height: normal; /* Reset line-height to normal */
 }
 
 p,
@@ -37,7 +35,7 @@ a,
 li,
 button,
 ul {
-  line-height: normal;
+  line-height: normal; /* Reset line-height to normal */
   text-decoration: none; /* Remove underline from links */
 }
 
@@ -60,147 +58,153 @@ select:focus {
   outline: none; /* Remove focus outline */
 }
 
-/* HERO SECTION CSS */
+/***** For NAVIGATION CSS see src/components/Navbar/NavbarElements *****/
+
+/***** HERO SECTION CSS *****/
 
 .hero-section {
   background-color: #ffcd29;
-  padding: 3rem;
-  width: 100vw;
+  padding: 8rem 5rem 5rem 5rem; /* Makes white space above and under hero-image equal */
+  width: 100%;
 }
 
 .hero-content {
   display: flex;
   align-items: center;
-  gap: 1rem;
-max-width: 2000px;
-  margin: 2rem auto;
+  gap: 1rem; /* Adjust the gap between the text and button */
+  max-width: 2000px; /* Set a maximum width for the content for better readability (the same as movie grid) */
+  margin: 0 auto; /* Center the content */
 }
 
 .hero-text {
-  flex: 1;
-
+  flex: 1; /* Make the text take up the available space */
 }
 
 .hero-text h1 {
-  font-size: 3em;
-
-
+  font-size: 2.5em;
 }
 
 .hero-text a {
-  display: block;
-  padding: 10px;
+  display: block; /* Make the button a block element */
+  padding: 1rem;
   width: 15em;
   background-color: #000;
   color: #fff;
-  border: none;
   font-size: 2rem;
   cursor: pointer;
-  text-decoration: none;
   text-align: center;
 }
 
 .hero-image {
-  flex: 1;
+  flex: 1; /* Make the image take up the available space */
 }
 
 .hero-image img {
-  max-width: 100%;
-  height: auto;
+  margin: 0; /* Remove default margin */
 }
 
 /* Responsive design for mobile devices */
 @media (max-width: 768px) {
+  .hero-section {
+    padding: 5rem 2rem 2rem; /* Adjust padding for smaller screens */
+  }
+
   .hero-content {
-    flex-direction: column;
-    margin-top: 2rem;
+    flex-direction: column; /* Stack the text, button, and image on top of each other */
+    gap: 2rem; /* Equal gap between text, button, and image */
   }
-  .hero-text,
-  .hero-image {
-    flex: none;
-    width: 100%;
-    text-align: center;
+  .hero-text {
+    text-align: center; /* Center the text on mobile screen */
   }
+
   .hero-text a {
-    width: 100%;
-  display: block;
+    width: 100%; /* Make the button full width to enhance a call for action */
   }
-
-
 }
+
+/***** SCROLL-TO-TOP BUTTON CSS *****/
+
+.scroll-to-top-button {
+  position: fixed; /* Set the button fixed to the viewport */
+  bottom: 100px;
+  right: 20px;
+  padding: 1rem;
+  font-size: 2rem;
+  z-index: 1000; /* Set z-index to ensure the button is on top of other elements */
+  background-color: #ffcd29;
+  opacity: 0.5; /* Set the button to be semi-transparent so the content at the bottom of a page can be readable */
+  width: 80px;
+  height: 80px;
+  border-radius: 50%; /* Make the button round */
+}
+
+/* MOVIE PAGES CSS */
 
 .pageTitle {
   text-align: center;
-  margin: 20px 0;
+  margin: 3rem 0;
+  font-weight: 100;
+  font-size: 4rem;
 }
 
 .movie-grid {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px; /* Adjust the gap between tiles as needed */
+  flex-wrap: wrap; /* Allow tiles to wrap to the next line */
+  gap: 2rem;
   justify-content: center; /* Center tiles within the container */
-  padding: 20px; /* Add some padding around the grid */
+  max-width: 2000px; /* Set a maximum width for the content for better readability (the same as hero content) */
+  margin: 0 auto; /* Center the content */
+  padding: 0 2rem;
 }
 
 .movie-tile {
-  flex: 0 1 300px; /* Tiles flex basis is 300px, change this value as needed */
-  display: flex;
-  flex-direction: column;
+  flex: 0 1 30rem; /* Tiles flex basis is 300px */
+  display: flex; /* Flex container for image, icons, title, text, and button */
+  flex-direction: column; /* Stack elements vertically */
   align-items: center;
-  background-color: #fff; /* Background color for the tiles */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Simple box shadow for styling */
-  border-radius: 8px; /* Optional: adds rounded corners to the tiles */
-  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 2rem;
+  padding: 2rem;
   text-align: center; /* Center the text */
 }
 
 .movie-tile img {
   width: 100%; /* Make image fill the container */
-  border-radius: 8px 8px 0 0; /* Optional: top rounded corners for the image */
-  margin-bottom: 20px;
-}
-
-.movie-tile h2 {
-  margin: 10px 0;
-}
-
-.movie-tile p {
-  flex-grow: 1; /* Allows the description to fill the space, pushing the button down */
-}
-
-.movie-tile button {
-  background-color: #007bff; /* Example button color */
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  margin-top: 20px;
-  cursor: pointer;
-  border-radius: 4px;
-}
-
-.movie-tile button:hover {
-  background-color: #0056b3; /* Darker shade on hover */
+  border-radius: 2rem; /* Optional: top rounded corners for the image */
+  margin: 0 0 2rem 0; /* Add space below the image (equal to the space above) */
 }
 
 .movie-tile .iconStyle {
-  font-size: 3rem;
+  font-size: 5rem;
   color: #ffcd29;
   margin: 0 10px;
 }
 
-.scroll-to-top-button {
-  position: fixed;
-  bottom: 100px;
-  right: 20px;
-  padding: 1rem;
-  font-size: 16px;
-  z-index: 1000;
+.movie-tile h2 {
+  font-size: 2rem;
+  margin: 2rem 0;
+}
+
+.movie-tile p {
+  flex-grow: 1; /* Allows the description to fill the space, pushing the button down */
+  font-size: 1.4rem;
+}
+
+.movie-tile button {
+  background-color: #000;
+  color: white;
+  padding: 1rem 2rem;
+  margin: 0;
+  cursor: pointer;
+  border-radius: 4px;
+  width: 100%;
+  font-size: 2rem;
+}
+
+.movie-tile button:hover { /* Change button color on hover */
   background-color: #ffcd29;
-  opacity: 0.5;
-  border: none;
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
+  color: #000;
 }
 
 /* CafePage.css */
