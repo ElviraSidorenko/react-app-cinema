@@ -33,7 +33,7 @@ export const NavMenu = styled.div`
 export const NavLink = styled(Link)`
   display: flex;
   align-items: center;  
-color: #000000;
+color: #222222;
   padding: 0 1rem;
   height: 100%;
   cursor: pointer;

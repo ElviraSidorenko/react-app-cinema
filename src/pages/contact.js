@@ -42,12 +42,25 @@ const Contact = () => {
       />
 
       <div className="history-section">
-        <h1>Est. 1974</h1>
-        <img alt="History bulding" src={`${process.env.PUBLIC_URL}/assets/history-img.jpeg`}></img>
+        <h1>Our History: «Est. 1974»</h1>
+        <img
+          alt="History bulding"
+          src={`${process.env.PUBLIC_URL}/assets/history-img.jpeg`}
+        ></img>
         <p>
-          For nearly half a century, we've been at the forefront of cinematic
-          experiences, offering moments of joy, thrill, and profound emotions to
-          generations. Dive into our journey and become part of our story.
+          Established in 1974, Tongariro Cinema has been a cornerstone of the
+          community, offering more than just a place to watch films; it's a
+          cultural hub where memories are made and shared. From its humble
+          beginnings as a single-screen venue, Tongariro Cinema has grown over
+          the decades into a beloved cinema complex, maintaining its charm and
+          commitment to bringing the magic of movies to generations of film
+          enthusiasts. Throughout its illustrious history, Tongariro Cinema has
+          evolved, embracing technological advancements to enhance the viewing
+          experience, while staying true to its roots by offering a curated
+          selection of films that cater to all tastes. As we look back over the
+          years, we are filled with pride for the role we've played in the lives
+          of our patrons and the enduring legacy of Tongariro Cinema as a place
+          where stories come to life.
         </p>
       </div>
 
@@ -91,7 +104,7 @@ const Contact = () => {
           <button type="submit">Submit</button>
         </form>
       </div>
-      
+
       {/* Modal */}
       {showModal && <ThankYouModal />}
 

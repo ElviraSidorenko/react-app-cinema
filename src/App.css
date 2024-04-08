@@ -1,4 +1,12 @@
-/***** DEFAULT CSS *****/
+/* Brand Colors:
+ * -------------
+ * Dark Gray (Primary): #222222
+ * Light Gray (Secondary): #F5F5F5
+ * Vibrant Yellow (Accent): #ffcd29
+ */
+
+/********** Global Styles **********/
+/* Resetting default browser styles */
 
 *,
 *::before,
@@ -17,43 +25,45 @@ html {
 
 body {
   overflow-x: hidden; /* Prevent horizontal scrolling */
-  position: relative; /* Position relative for footer positioning */
-  font-family: Roboto, Arial, sans-serif; /* Set default font family: Roboto is a popular choice for modern web interfaces */
+  position: relative; /* Needed for absolute positioning elements */
+  font-family: Roboto, Arial, sans-serif; /* Default font: Roboto is a popular choice for modern web interfaces */
   font-size: 1.6em; /* Set default font size to 16px */
   height: 100%; /* Set body height to 100% */
+  color: #222222; /* Set default text color */
+  background-color: #F5F5F5; /* Set default background color */
 }
 
 #root {
   height: 100%; /* Set root element height to 100% */
 }
 
+/* Text elements */
 h1,
 h2,
 h3,
 h4,
 h5,
-h6 {
-  line-height: normal; /* Reset line-height to normal */
-}
-
+h6,
 p,
 a,
 li,
 button,
 ul {
-  line-height: normal; /* Reset line-height to normal */
-  text-decoration: none; /* Remove underline from links */
+  line-height: normal; /* Reset line height */
+  text-decoration: none; /* No underlines */
 }
 
 a:hover {
   text-decoration: none; /* Remove underline on hover */
 }
 
+/* Images */
 img {
   width: 100%; /* Make images responsive */
   height: auto; /* Prevent image distortion */
 }
 
+/* Form elements */
 button {
   border: 0; /* Remove default button border */
 }
@@ -66,18 +76,18 @@ select:focus {
 
 /***** For NAVIGATION CSS see src/components/Navbar/NavbarElements *****/
 
-/***** HERO SECTION CSS *****/
+/********** Hero Section **********/
 
 .hero-section {
-  background-color: #ffcd29;
+  background-color: #ffcd29; /* Set hero section background color */
   padding: 8rem 5rem 5rem 5rem; /* Makes white space above and under hero-image equal */
-  width: 100%;
+  width: 100%; /* Full width */
 }
 
 .hero-content {
-  display: flex;
-  align-items: center;
-  gap: 1rem; /* Adjust the gap between the text and button */
+  display: flex; /* Flex container for text and image */
+  align-items: center; /* Center the text and image vertically */
+  gap: 1rem; /* Adjust the gap between the text and image */
   max-width: 2000px; /* Set a maximum width for the content for better readability (the same as movie grid) */
   margin: 0 auto; /* Center the content */
 }
@@ -91,12 +101,13 @@ select:focus {
   margin-bottom: 1rem;
 }
 
+/* Style for the button */
 .hero-text a {
   display: block; /* Make the button a block element */
   padding: 1rem;
   width: 15em;
-  background-color: #000;
-  color: #fff;
+  background-color: #222222;
+  color: #F5F5F5;
   font-size: 2rem;
   cursor: pointer;
   text-align: center;
@@ -105,7 +116,6 @@ select:focus {
 
 .hero-image {
   flex: 1; /* Make the image take up the available space */
-
 }
 
 .hero-image img {
@@ -113,7 +123,7 @@ select:focus {
   border-radius: 1rem; /* Round the corners of the image */
 }
 
-/* Responsive design for mobile devices */
+/* Hero section responsive design */
 @media (max-width: 768px) {
   .hero-section {
     padding: 5rem 2rem 2rem; /* Adjust padding for smaller screens */
@@ -131,15 +141,13 @@ select:focus {
 
   .hero-text a {
     width: 100%; /* Make the button full width to enhance a call for action */
-
   }
   .hero-image {
     order: -1; /* Move the image above the text and button */
-
   }
 }
 
-/***** SCROLL-TO-TOP BUTTON CSS *****/
+/********** Scroll-to-Top Button **********/
 
 .scroll-to-top-button {
   position: fixed; /* Set the button fixed to the viewport */
@@ -155,7 +163,7 @@ select:focus {
   border-radius: 50%; /* Make the button round */
 }
 
-/* MOVIE PAGES CSS */
+/********** Movie Pages **********/
 
 .pageTitle {
   text-align: center;
@@ -179,9 +187,9 @@ select:focus {
   display: flex; /* Flex container for image, icons, title, text, and button */
   flex-direction: column; /* Stack elements vertically */
   align-items: center;
-  background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 2rem;
+  background-color: #F5F5F5;
+  box-shadow: 0 4px 8px rgba(34, 34, 34, 0.2);
+  border-radius: 1rem;
   padding: 2rem;
   text-align: center; /* Center the text */
 }
@@ -212,10 +220,11 @@ select:focus {
 .movie-tile p {
   flex-grow: 1; /* Allows the description to fill the space, pushing the button down */
   font-size: 1.4rem;
+  margin-bottom: 2rem;
 }
 
 .movie-tile button {
-  background-color: #000;
+  background-color: #222222;
   color: white;
   padding: 1rem 2rem;
   margin: 0;
@@ -225,12 +234,13 @@ select:focus {
   border-radius: 1rem;
 }
 
-.movie-tile button:hover { /* Change button color on hover */
+.movie-tile button:hover {
+  /* Change button color on hover */
   background-color: #ffcd29;
-  color: #000;
+  color: #222222;
 }
 
-/***** CAFE PAGE CSS *****/
+/********** Cafe Page **********/
 
 /* Style for cafe-info container */
 .cafe-info {
@@ -240,12 +250,12 @@ select:focus {
 }
 
 /* Style for headings */
-.cafe-info h1, .cafe-info h2 {
+.cafe-info h1,
+.cafe-info h2 {
   font-size: 3rem;
   margin: 3rem 0;
   font-weight: 100;
   text-align: center;
-
 }
 
 /* Style for paragraphs */
@@ -254,7 +264,6 @@ select:focus {
   line-height: 1.5;
   text-align: center;
   margin-bottom: 2rem;
-
 }
 
 /* Style for menu image */
@@ -268,7 +277,7 @@ select:focus {
 /* Style for operations info */
 .operations-info {
   max-width: 800px; /* Set a maximum width for better readability */
-  margin: 0 auto 3rem; /* Center the content */
+  margin: 3rem auto 3rem; /* Center the content */
   padding: 0 2rem; /* Add padding to the sides */
 }
 
@@ -276,15 +285,14 @@ select:focus {
   font-size: 3rem;
   margin: 6rem 0 3rem 0;
   font-weight: 100;
-  text-align: left;
+  text-align: center;
 }
 
 .operations-info p {
   font-size: 1.4rem;
   margin-bottom: 1rem;
-
+  text-align: center;
 }
-
 
 /* History section */
 .history-section {
@@ -297,28 +305,33 @@ select:focus {
 .history-section h1 {
   font-size: 3rem;
   margin: 3rem 0;
-  font-weight: 100;
 }
 
 .history-section img {
   max-width: 500px;
-
 }
 
 .history-section p {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   margin: 3rem 0;
+  line-height: 2rem;
 }
 
 /* Contact section */
+
 .contact-section {
-  padding: 2rem;
-  text-align: center;
   width: 90%;
   max-width: 500px;
   margin: 0 auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 2rem;
+  text-align: center;
+}
+
+.contact-section form {
+  padding: 2rem;
+  text-align: center;
+
+  box-shadow: 0 4px 8px rgba(34, 34, 34, 0.2);
+  border-radius: 1rem;
 }
 
 .contact-section h2 {
@@ -331,7 +344,6 @@ select:focus {
   margin-bottom: 2rem;
 }
 
-
 .contact-section .form-group {
   margin-bottom: 2rem;
 }
@@ -340,7 +352,6 @@ select:focus {
   font-weight: bold;
   display: block;
   margin-bottom: 0.5rem;
-
 }
 
 .contact-section select,
@@ -352,7 +363,7 @@ select:focus {
   padding: 1rem;
   font-size: 1.4rem;
   border: 1px solid #ccc;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
 }
 
 .contact-section textarea {
@@ -360,8 +371,8 @@ select:focus {
 }
 
 .contact-section button[type="submit"] {
-  background-color: #000;
-  color: #fff;
+  background-color: #222222;
+  color: #F5F5F5;
   padding: 1rem 2rem;
   font-size: 1.2rem;
   cursor: pointer;
@@ -373,7 +384,7 @@ select:focus {
 
 .contact-section button[type="submit"]:hover {
   background-color: #ffcd29;
-  color: #000;
+  color: #222222;
 }
 
 /* Where to find us section */
@@ -399,8 +410,6 @@ select:focus {
   }
 }
 
-
-
 .where-to-find-us h3 {
   font-size: 3rem;
   margin-bottom: 2rem;
@@ -419,7 +428,7 @@ select:focus {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6); /* Darker backdrop for better focus */
+  background-color: rgba(34, 34, 34, 0.6); /* Darker backdrop for better focus */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -428,11 +437,11 @@ select:focus {
 }
 
 .modal .contact-modal-content {
-  background-color: #fff;
+  background-color: #F5F5F5;
   padding: 2rem;
   border-radius: 1rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  text-align: center; 
+  box-shadow: 0 4px 8px rgba(34, 34, 34, 0.6);
+  text-align: center;
   width: 90%;
   max-width: 500px;
 }
@@ -443,31 +452,29 @@ select:focus {
 }
 
 .modal .contact-modal-content button {
-  
   padding: 1rem 2rem;
   font-size: 1.6rem; /* Larger font size for better readability */
-  border-radius: 0.5rem;
-  background-color: #ffcd29; 
-  color: #000; 
+  border-radius: 1rem;
+  background-color: #ffcd29;
+  color: #222222;
   cursor: pointer; /* Cursor pointer to indicate clickable */
   transition: background-color 0.2s; /* Smooth background color transition */
 }
 
 .modal .contact-modal-content button:hover {
-  background-color: #000; /* Darker shade of blue on hover */
-  color: #fff;
+  background-color: #222222; /* Darker shade of blue on hover */
+  color: #F5F5F5;
 }
 
-
-/* Booking page */
+/********** Booking Page **********/
 
 .booking-container {
   max-width: 800px;
   width: 90%;
   margin: 3rem auto;
-  padding: 1rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 2rem;
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(34, 34, 34, 0.2);
+  border-radius: 1rem;
 }
 
 .booking-container h1 {
@@ -495,7 +502,6 @@ select:focus {
   font-size: 2rem;
   text-align: center;
   margin-bottom: 3rem;
-
 }
 
 .booking-container h2 {
@@ -509,8 +515,8 @@ select:focus {
   max-width: 300px;
   margin: 3rem auto;
   padding: 1rem 2rem;
-  background-color: #000;
-  color: #fff;
+  background-color: #222222;
+  color: #F5F5F5;
   border-radius: 1rem;
   cursor: pointer;
   font-size: 2rem;
@@ -518,10 +524,8 @@ select:focus {
 
 .booking-container button:hover {
   background-color: #ffcd29;
-  color: #000;
+  color: #222222;
 }
-
-
 
 /* Seating Grid */
 .seatGrid {
@@ -545,12 +549,12 @@ select:focus {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  color: #fff;
+  color: #F5F5F5;
 }
 
 .selected {
-  background-color: #4caf50;
-  color: #fff;
+  background-color: #ffcd29;
+  color: #222222;
 }
 
 @media (max-width: 768px) {
@@ -565,7 +569,7 @@ select:focus {
 /* see .modal style above */
 
 .booking-modal-content {
-  background-color: #fff;
+  background-color: #F5F5F5;
   padding: 2rem;
   border-radius: 1rem;
   width: 90%;
@@ -581,21 +585,17 @@ select:focus {
 .booking-modal-content p {
   font-size: 1.6rem;
   margin-bottom: 2rem;
-
 }
 
-.booking-modal-content .booking-modal-info{
-
+.booking-modal-content .booking-modal-info {
   margin: 0 auto 5rem;
   width: 70%;
 }
 
-
-
 .booking-modal-terms-text {
   font-size: 1.4rem;
   font-style: italic;
-  color: #999;
+  color: rgba(34, 34, 34, 0.6);
   display: block;
   margin: 5rem auto 3rem;
   text-align: center;
@@ -605,9 +605,9 @@ select:focus {
 .booking-modal-content button {
   padding: 1rem 2rem;
   font-size: 1.6rem; /* Larger font size for better readability */
-  border-radius: 0.5rem;
-  background-color: #ffcd29; 
-  color: #000; 
+  border-radius: 1rem;
+  background-color: #ffcd29;
+  color: #222222;
   cursor: pointer; /* Cursor pointer to indicate clickable */
   transition: background-color 0.2s; /* Smooth background color transition */
   margin: 0 auto;
@@ -618,9 +618,8 @@ select:focus {
 
 .modal-content button:hover {
   background-color: #ffcd29;
-  color: #000;
+  color: #222222;
 }
-
 
 @media (max-width: 768px) {
   .booking-modal-content h2 {
@@ -629,14 +628,11 @@ select:focus {
   .booking-modal-content p {
     font-size: 1rem;
   }
-
-
 }
 
-
-/* Footer styles */
+/********** Footer **********/
 .footer {
-  color: #fff;
+  color: #F5F5F5;
   padding: 3rem 0 3rem;
   width: 90%;
   max-width: 2000px;
@@ -658,7 +654,7 @@ select:focus {
 
 .contact-button {
   background-color: #ffcd29;
-  color: #333;
+  color: #333333;
   padding: 1rem 2rem;
   border-radius: 1rem;
   cursor: pointer;
