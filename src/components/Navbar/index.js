@@ -22,7 +22,7 @@ const Navbar = () => {
 
   // Function to handle NavLink click (close the menu and navigate to the specified route)
   const handleNavLinkClick = (to) => {
-    toggle(); // Close the menu
+    setIsOpen(false); // Close the menu
     history(to); // Navigate to the specified route
   };
 
