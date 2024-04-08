@@ -23,8 +23,8 @@ const Contact = () => {
   };
   // Modal component
   const ThankYouModal = () => (
-    <div className="modal-background">
-      <div className="modal-content">
+    <div className="modal">
+      <div className="contact-modal-content">
         <p>Thank you, someone will get back to you soon.</p>
         <button onClick={closeModal}>Close</button>
       </div>
@@ -42,7 +42,8 @@ const Contact = () => {
       />
 
       <div className="history-section">
-        <h2>Est. 1974</h2>
+        <h1>Est. 1974</h1>
+        <img alt="History bulding" src={`${process.env.PUBLIC_URL}/assets/history-img.jpeg`}></img>
         <p>
           For nearly half a century, we've been at the forefront of cinematic
           experiences, offering moments of joy, thrill, and profound emotions to

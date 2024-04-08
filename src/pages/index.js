@@ -5,9 +5,7 @@ import MovieGrid from "../components/MovieGrid";
 import movies from "../data/movies.json";
 import ScrollToTopButton from "../components/ScrollToTopButton";
 
-
 const Home = () => {
-
   return (
     <>
       <Hero
@@ -17,7 +15,7 @@ const Home = () => {
         isDownload={false}
         imageUrl={`${process.env.PUBLIC_URL}/assets/nightmares_unleashed_promotion_banner.png`}
       />
-      <MovieGrid movies={movies} pageTitle="NOW SHOWING" isBookable={true}/>
+      <MovieGrid movies={movies} pageTitle="NOW SHOWING" isBookable={true} />
       <Footer />
       <ScrollToTopButton />
     </>

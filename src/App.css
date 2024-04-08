@@ -12,6 +12,7 @@ html {
   font-size: 62.5%; /* Set base font size (1rem) to 10px */
   scroll-behavior: smooth; /* Smooth scrolling behavior */
   scroll-padding-top: 75px; /* Add padding for smooth scrolling */
+  height: 100%; /* Set html element height to 100% */
 }
 
 body {
@@ -19,6 +20,11 @@ body {
   position: relative; /* Position relative for footer positioning */
   font-family: Roboto, Arial, sans-serif; /* Set default font family: Roboto is a popular choice for modern web interfaces */
   font-size: 1.6em; /* Set default font size to 16px */
+  height: 100%; /* Set body height to 100% */
+}
+
+#root {
+  height: 100%; /* Set root element height to 100% */
 }
 
 h1,
@@ -234,7 +240,7 @@ select:focus {
 }
 
 /* Style for headings */
-.cafe-info h1, h2 {
+.cafe-info h1, .cafe-info h2 {
   font-size: 3rem;
   margin: 3rem 0;
   font-weight: 100;
@@ -255,6 +261,8 @@ select:focus {
 .cafe-info img {
   display: block;
   border-radius: 1rem;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 /* Style for operations info */
@@ -266,8 +274,9 @@ select:focus {
 
 .operations-info h2 {
   font-size: 3rem;
-  margin: 3rem 0 3rem 0;
+  margin: 6rem 0 3rem 0;
   font-weight: 100;
+  text-align: left;
 }
 
 .operations-info p {
@@ -279,130 +288,252 @@ select:focus {
 
 /* History section */
 .history-section {
-  background-color: #f9f9f9;
-  padding: 50px 0;
+  padding: 0 2rem;
   text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.history-section h2 {
-  font-size: 2rem;
-  color: #333;
-  margin-bottom: 20px;
+.history-section h1 {
+  font-size: 3rem;
+  margin: 3rem 0;
+  font-weight: 100;
+}
+
+.history-section img {
+  max-width: 500px;
+
 }
 
 .history-section p {
-  font-size: 1rem;
-  color: #666;
-  margin-bottom: 20px;
+  font-size: 1.4rem;
+  margin: 3rem 0;
 }
 
 /* Contact section */
 .contact-section {
-  padding: 50px 0;
+  padding: 2rem;
   text-align: center;
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 2rem;
 }
 
 .contact-section h2 {
-  font-size: 2rem;
-  color: #333;
-  margin-bottom: 20px;
+  font-size: 3rem;
+  margin: 3rem 0;
 }
 
 .contact-section p {
-  font-size: 1rem;
-  color: #666;
-  margin-bottom: 20px;
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
 }
 
-.contact-section form {
-  max-width: 500px;
-  margin: 0 auto;
-}
 
 .contact-section .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
 }
 
 .contact-section label {
   font-weight: bold;
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 0.5rem;
+
 }
 
+.contact-section select,
 .contact-section input[type="text"],
 .contact-section input[type="email"],
 .contact-section input[type="tel"],
 .contact-section textarea {
   width: 100%;
-  padding: 10px;
-  font-size: 1rem;
+  padding: 1rem;
+  font-size: 1.4rem;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 0.5rem;
 }
 
 .contact-section textarea {
-  resize: vertical;
+  resize: vertical; /* Allow vertical resizing */
 }
 
 .contact-section button[type="submit"] {
-  background-color: #007bff;
+  background-color: #000;
   color: #fff;
-  border: none;
-  padding: 10px 20px;
+  padding: 1rem 2rem;
   font-size: 1.2rem;
   cursor: pointer;
   transition: background-color 0.3s;
+  width: 50%;
+  max-width: 200px;
+  border-radius: 1rem;
 }
 
 .contact-section button[type="submit"]:hover {
-  background-color: #0056b3;
+  background-color: #ffcd29;
+  color: #000;
 }
 
 /* Where to find us section */
 .where-to-find-us {
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding: 50px 0;
+  padding: 1rem;
+  width: 100%;
+  max-width: 2000px;
+  margin: 6rem auto;
 }
 
 .where-to-find-us .map {
-  flex: 1;
   margin-right: 20px;
+  max-width: 500px;
 }
 @media (max-width: 768px) {
   .where-to-find-us .map {
     display: none;
   }
+  .where-to-find-us .address-and-contact {
+    text-align: center;
+  }
 }
 
-.where-to-find-us .address-and-contact {
-  flex: 1;
-  text-align: left;
-}
+
 
 .where-to-find-us h3 {
-  font-size: 2rem;
-  color: #333;
-  margin-bottom: 20px;
+  font-size: 3rem;
+  margin-bottom: 2rem;
 }
 
 .where-to-find-us p {
-  font-size: 1rem;
-  color: #666;
+  font-size: 1.4rem;
   margin-bottom: 10px;
 }
+
+/***** Contact modal CSS *****/
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Darker backdrop for better focus */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s; /* Smooth fade-in effect */
+  padding: 1rem;
+}
+
+.modal .contact-modal-content {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center; 
+  width: 90%;
+  max-width: 500px;
+}
+
+.modal .contact-modal-content p {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+}
+
+.modal .contact-modal-content button {
+  
+  padding: 1rem 2rem;
+  font-size: 1.6rem; /* Larger font size for better readability */
+  border-radius: 0.5rem;
+  background-color: #ffcd29; 
+  color: #000; 
+  cursor: pointer; /* Cursor pointer to indicate clickable */
+  transition: background-color 0.2s; /* Smooth background color transition */
+}
+
+.modal .contact-modal-content button:hover {
+  background-color: #000; /* Darker shade of blue on hover */
+  color: #fff;
+}
+
+
+/* Booking page */
+
+.booking-container {
+  max-width: 800px;
+  width: 90%;
+  margin: 3rem auto;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 2rem;
+}
+
+.booking-container h1 {
+  margin: 3rem 0;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.booking-container label {
+  display: block;
+  margin: 1rem 0;
+}
+
+.booking-container select,
+.booking-container input[type="text"] {
+  width: 100%;
+  padding: 1rem;
+
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+}
+
+.booking-container p {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 3rem;
+
+}
+
+.booking-container h2 {
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.booking-container button {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  margin: 3rem auto;
+  padding: 1rem 2rem;
+  background-color: #000;
+  color: #fff;
+  border-radius: 1rem;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.booking-container button:hover {
+  background-color: #ffcd29;
+  color: #000;
+}
+
+
 
 /* Seating Grid */
 .seatGrid {
   display: grid;
   grid-template-rows: repeat(10, 1fr);
-  gap: 5px;
+  gap: 0.5rem;
+  margin: 3rem auto;
 }
 
 .seatRow {
   display: flex;
-  gap: 5px;
+  gap: 0.5rem;
   justify-content: center;
 }
 
@@ -422,133 +553,97 @@ select:focus {
   color: #fff;
 }
 
-.booking-container {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
+@media (max-width: 768px) {
+  .seat {
+    width: 2rem;
+    height: 2rem;
+  }
 }
 
-.booking-container h1,
-.booking-container h2 {
-  margin-top: 20px;
-}
+/***** Booking Modal CSS *****/
 
-.booking-container label {
-  display: block;
-  margin-top: 10px;
-}
+/* see .modal style above */
 
-.booking-container select,
-.booking-container input[type="text"] {
-  width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.booking-container button {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  margin-top: 20px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.booking-container button:hover {
-  background-color: #0056b3;
-}
-
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.modal-content {
+.booking-modal-content {
   background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 90%;
+  max-width: 500px;
 }
 
-/* Add your styles for the close button */
-.close-button {
-  background-color: #ccc;
-  border: none;
-  color: #fff;
-  padding: 10px 20px;
-  cursor: pointer;
-  font-size: 16px;
-  border-radius: 5px;
+.booking-modal-content h2 {
+  font-size: 3rem;
+  margin-bottom: 5rem;
+  text-align: center;
 }
 
-.close-button:hover {
-  background-color: #999;
+.booking-modal-content p {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+
 }
 
-/* Backdrop styles */
-.modal-background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6); /* Darker backdrop for better focus */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: fadeIn 0.3s; /* Smooth fade-in effect */
+.booking-modal-content .booking-modal-info{
+
+  margin: 0 auto 5rem;
+  width: 70%;
 }
 
-/* Modal content box styles */
-.modal-content {
-  width: 90%; /* Responsive width */
-  max-width: 500px; /* Maximum width */
-  background-color: white;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  text-align: center; /* Center the text for better readability */
+
+
+.booking-modal-terms-text {
+  font-size: 1.4rem;
+  font-style: italic;
+  color: #999;
+  display: block;
+  margin: 5rem auto 3rem;
+  text-align: center;
+  width: 70%;
 }
 
-/* Close button styles */
-.modal-content button {
-  margin-top: 20px; /* Some space above the button */
-  padding: 10px 20px;
-  font-size: 16px; /* Larger font size for better readability */
-  border: none;
-  border-radius: 5px;
-  background-color: #007bff; /* A pleasant blue */
-  color: white; /* White text on the blue button */
+.booking-modal-content button {
+  padding: 1rem 2rem;
+  font-size: 1.6rem; /* Larger font size for better readability */
+  border-radius: 0.5rem;
+  background-color: #ffcd29; 
+  color: #000; 
   cursor: pointer; /* Cursor pointer to indicate clickable */
   transition: background-color 0.2s; /* Smooth background color transition */
+  margin: 0 auto;
+  width: 100%;
+  max-width: 200px;
+  display: block;
 }
 
 .modal-content button:hover {
-  background-color: #0056b3; /* Darker shade of blue on hover */
+  background-color: #ffcd29;
+  color: #000;
 }
+
+
+@media (max-width: 768px) {
+  .booking-modal-content h2 {
+    font-size: 2rem;
+  }
+  .booking-modal-content p {
+    font-size: 1rem;
+  }
+
+
+}
+
 
 /* Footer styles */
 .footer {
   color: #fff;
-  padding: 1rem;
+  padding: 3rem 0 3rem;
+  width: 90%;
+  max-width: 2000px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  bottom: 0;
+  margin: 10rem auto 0;
 }
 
 .left-content {
@@ -558,21 +653,34 @@ select:focus {
 .right-content {
   display: flex;
   justify-content: flex-end;
+  gap: 2rem;
 }
 
 .contact-button {
   background-color: #ffcd29;
   color: #333;
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 5px;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
   cursor: pointer;
-  text-decoration: none;
+  font-size: 2rem;
 }
 
 .icon {
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin-left: 1rem;
   color: #ffcd29;
   text-decoration: none;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
 }

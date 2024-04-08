@@ -49,6 +49,7 @@ const Booking = () => {
 
   return (
     <>
+<div className="main-content">
       <Hero
         title="Experience the Magic of Cinema with Us"
         buttonText="BOOK NOW"
@@ -59,6 +60,7 @@ const Booking = () => {
       {/* Booking form */}
       <div className="booking-container">
         <h1>Booking Details</h1>
+        <p>Select your movie to see available dates and time.</p>
         {/* Movie selection */}
         <label htmlFor="movieSelection">Movie Selection:</label>
         <select
@@ -142,7 +144,7 @@ const Booking = () => {
               ))}
             </div>
             {/* Display total price based on the selected seats and booking button */}
-            <div>Total: ${totalPrice}</div>
+            <p>Total: ${totalPrice}</p>
             <button onClick={handleBookNow}>Book Now</button>
           </>
         )}
@@ -150,29 +152,26 @@ const Booking = () => {
       {/* Booking summary modal */}
       {showBookingSummary && (
         <div className="modal">
-          <div className="modal-content">
+          <div className="booking-modal-content">
             <h2>Booking Summary</h2>
             {/* Display selected movie, date, time, theatre, seats, total price */}
-            <p>Movie: {selectedMovie}</p>
-            <p>Date: {selectedDate}</p>
-            <p>Time: {selectedTime}</p>
-            <p>Theatre: ${Math.floor(Math.random() * 4) + 1}</p>
-            <p>Seats: {selectedSeats.join(", ")}</p>
-            <p>Total Price: ${totalPrice}</p>
-            <p>Confirmation Number: {confirmationNumber}</p>
-            <p>
-              Terms & Conditions: By confirming your booking, you agree to the
-              following terms and conditions: For any modifications or
-              cancellations, please directly contact our team. Payment is due
+            <div className="booking-modal-info">
+            <p><strong>Movie:</strong> {selectedMovie}</p>
+            <p><strong>Date:</strong> {selectedDate}</p>
+            <p><strong>Time:</strong> {selectedTime}</p>
+            <p><strong>Theatre:</strong> ${Math.floor(Math.random() * 4) + 1}</p>
+            <p><strong>Seats:</strong> {selectedSeats.join(", ")}</p>
+            <p><strong>Total Price:</strong> ${totalPrice}</p>
+            <p><strong>Confirmation Number:</strong> {confirmationNumber}</p>
+            </div>
+            <p className="booking-modal-terms-text">
+              Terms & Conditions: For any modifications or cancellations, please directly contact our team. Payment is due
               upon arrival at our premises and should be made at the counter
-              with our staff. Should you need to make changes or cancel your
-              reservation, reaching out to us directly ensures we can
-              accommodate your needs promptly. Please be aware that failure to
+              with our staff. Please be aware that failure to
               show up for your booking without prior cancellation may incur
-              charges. These terms are part of our commitment to providing you
-              with clear and concise service expectations.
+              charges.
             </p>
-            <button className="close-button" onClick={handleCloseModal}>
+            <button onClick={handleCloseModal}>
               Close
             </button>
           </div>
@@ -180,6 +179,7 @@ const Booking = () => {
       )}
       <Footer />
       <ScrollToTopButton />
+</div>
     </>
   );
 };
