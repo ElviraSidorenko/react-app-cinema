@@ -122,6 +122,7 @@ const Booking = () => {
         {selectedTime && (
           <>
             <h2>Select Your Seats</h2>
+            <p>SCREEN</p>
             <div className="seatGrid">
               {/* Generate seat grid */}
               {Array.from({ length: 10 }, (_, row) => (
@@ -159,7 +160,7 @@ const Booking = () => {
             <p><strong>Movie:</strong> {selectedMovie}</p>
             <p><strong>Date:</strong> {selectedDate}</p>
             <p><strong>Time:</strong> {selectedTime}</p>
-            <p><strong>Theatre:</strong> ${Math.floor(Math.random() * 4) + 1}</p>
+            <p><strong>Theatre:</strong> {Math.floor(Math.random() * 4) + 1}</p>
             <p><strong>Seats:</strong> {selectedSeats.join(", ")}</p>
             <p><strong>Total Price:</strong> ${totalPrice}</p>
             <p><strong>Confirmation Number:</strong> {confirmationNumber}</p>
