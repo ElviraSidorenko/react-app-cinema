@@ -13,7 +13,7 @@ Ensure you have [Node.js](https://nodejs.org/) installed on your computer to use
 ### Installation
 
 1. Clone the repo
-2. Run npm install
+2. Run `npm install`
 
 ## Available Scripts
 
