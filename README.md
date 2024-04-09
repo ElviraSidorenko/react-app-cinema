@@ -2,6 +2,26 @@
 
 Welcome to the repository for the Tongariro Cinemas Website. This project aims to provide an engaging and informative online presence for Tongariro Cinemas, showcasing current movies, showtimes, and upcoming releases. Please note that this project is currently a front-end only implementation, developed with React and bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## File Structure
+
+react-app-cinema/
+├── node_modules/ # (once npm install is run)
+├── public/ # Public folder
+│ ├── assets/ # Assets folder (all media files)
+│ ├── index.html # HTML template
+│ └── manifest.json # Manifest file
+├── src/ # Source code
+│ ├── components/ # React components
+│ ├── data/ # Data files
+│ ├── pages/ # Page components
+│ ├── App.css # CSS styles for App component
+│ ├── App.js # Main App component
+│ └── index.js # Entry point
+├── .gitignore # Git ignore rules
+├── package-lock.json # Lock file for npm dependencies
+├── package.json # npm package configuration
+└── README.md # Project README file
+
 ## Getting Started
 
 To get the project up and running on your local machine for development and testing purposes, follow these simple steps.
