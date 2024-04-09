@@ -9,9 +9,9 @@ const Footer = () => {
                 <a href='/contact' className="contact-button">Contact Us</a>
             </div>
             <div className="right-content">
-                <a href="https://facebook.com"><FaFacebook className="icon" /></a>
-                <a href="https://twitter.com"><FaTwitter className="icon" /></a>
-                <a href="https://instagram.com"><FaInstagram className="icon" /></a>
+                <a href="https://facebook.com" target="blank"><FaFacebook className="icon" /></a>
+                <a href="https://twitter.com" target="blank"><FaTwitter className="icon" /></a>
+                <a href="https://instagram.com" target="blank"><FaInstagram className="icon" /></a>
             </div>
         </footer>
     );
